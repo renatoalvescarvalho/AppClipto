@@ -14,7 +14,7 @@ import renato.clipto.fragments.TwoFragment;
 
 public class CenterTabsActivity extends AppCompatActivity {
 
-        
+
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;

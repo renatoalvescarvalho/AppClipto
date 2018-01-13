@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void fixedTabsClick(View view) {
-        intent = new Intent(MainActivity.this, FixedTabsActivity.class);
-        startActivity(intent);
-    }
 
     public void scrollableTabsClick(View view) {
         intent = new Intent(MainActivity.this, ScrollableTabsActivity.class);
@@ -47,16 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void customTabsClick(View view) {
         intent = new Intent(MainActivity.this, CustomTabsActivity.class);
-        startActivity(intent);
-    }
-
-    public void onlyIconsTabsClick(View view) {
-        intent = new Intent(MainActivity.this, OnlyIconsTabsActivity.class);
-        startActivity(intent);
-    }
-
-    public void iconsAndTextTabsClick(View view) {
-        intent = new Intent(MainActivity.this, IconsAndTextActivity.class);
         startActivity(intent);
     }
 
