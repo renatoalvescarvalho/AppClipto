@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="renato.clipto.fragments.OneFragment">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dip">
+
+        <TextView
+            android:id="@+id/txtUltimo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="#696969"
+            android:padding="16dip"
+            android:text="0"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="22dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="11dp"
+            android:background="@color/cardview_dark_background"
+            android:textColor="@color/cardview_light_background"
+            android:text=" Último Preço: " />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dip">
+
+        <TextView
+            android:id="@+id/txtMaior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="#696969"
+            android:padding="16dip"
+            android:text="0"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="22dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="11dp"
+            android:background="@color/cardview_dark_background"
+            android:textColor="@color/cardview_light_background"
+            android:text=" Maior Preço: "
+            android:id="@+id/lblMaior"
+            />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dip">
+
+        <TextView
+            android:id="@+id/txtMenor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dip"
+            android:background="#696969"
+            android:padding="16dip"
+            android:text="0"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="22dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="11dp"
+            android:background="@color/cardview_dark_background"
+            android:textColor="@color/cardview_light_background"
+            android:text=" Menor Preço: "
+            android:id="@+id/lblMenor"
+            />
+    </FrameLayout>
+        <ImageView
+            android:id="@+id/imgMoeda"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dip"
+            />
+
+</LinearLayout>
+
+
+
+</RelativeLayout>
