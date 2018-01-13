@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dip"
-            android:background="#696969"
+            android:background="#5F9EA0"
             android:padding="16dip"
             android:text="0"
             android:textColor="@color/cardview_light_background"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:layout_marginRight="11dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#556B2F"
             android:textColor="@color/cardview_light_background"
             android:text=" Último Preço: " />
     </FrameLayout>
