@@ -30,19 +30,9 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void centerTabsClick(View view) {
-        intent = new Intent(MainActivity.this, CenterTabsActivity.class);
-        startActivity(intent);
-    }
-
 
     public void scrollableTabsClick(View view) {
         intent = new Intent(MainActivity.this, ScrollableTabsActivity.class);
-        startActivity(intent);
-    }
-
-    public void customTabsClick(View view) {
-        intent = new Intent(MainActivity.this, CustomTabsActivity.class);
         startActivity(intent);
     }
 

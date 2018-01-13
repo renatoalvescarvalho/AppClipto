@@ -16,8 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="renato.clipto.CenterTabsActivity" />
-        <activity android:name="renato.clipto.CustomTabsActivity" />
         <activity android:name="renato.clipto.ScrollableTabsActivity" />
     </application>
 
