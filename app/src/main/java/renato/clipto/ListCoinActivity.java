@@ -39,6 +39,7 @@ public class ListCoinActivity extends AppCompatActivity {
 
         ArrayList<Moeda> list =  new ArrayList<Moeda>();
 
+        //Alterar para API : https://api.coinmarketcap.com/v1/ticker/?convert=BRL
         for(int l=0; l<= 50; l++){
             list.add(new Moeda("","Moeda " + l, l+",00","%"+l));
         }
