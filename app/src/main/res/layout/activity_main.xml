@@ -26,9 +26,17 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lista de Criptomoedas"
+            android:text="Criptomoedas"
             android:id="@+id/button3"
             android:onClick="scrollableTabsClick"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista Completa"
+            android:id="@+id/button4"
+            android:onClick="listaCoinTabsClick"/>
+
 
     </LinearLayout>
 
