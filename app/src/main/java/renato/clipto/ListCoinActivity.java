@@ -65,8 +65,6 @@ public class ListCoinActivity extends AppCompatActivity {
 
                 if(!response.isSuccessful()){
                     Log.i("TAG","Erro:" + response.code());
-
-
                 }
                 else{
                     ArrayList<Moeda> list =  new ArrayList<Moeda>();

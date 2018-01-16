@@ -88,8 +88,6 @@ public class OneFragment extends Fragment {
             }
         });
 
-
-
         return view;
     }
 
