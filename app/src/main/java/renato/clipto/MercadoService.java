@@ -7,6 +7,7 @@ package renato.clipto;
 
 import renato.clipto.Models.Coinmarketcap;
 import renato.clipto.Models.Mercado;
+import renato.clipto.Models.Moeda;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
@@ -35,5 +36,9 @@ public interface MercadoService {
 
     @GET("ticker/ripple/?convert=brl")
     Call<Coinmarketcap[]>  getRipple();
+
+    @GET("ticker/?convert=BRL")
+    Call<Moeda[]>  getListAll();
+
 
 }

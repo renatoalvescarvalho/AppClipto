@@ -7,16 +7,16 @@ package renato.clipto.Models;
 public class Moeda {
 
     private  String imagem;
-    private  String nome;
-    private  String valor;
-    private  String change_24h;
+    private  String name;
+    private  String price_brl;
+    private  String percent_change_24h;
 
 
-    public Moeda (String imagem, String nome, String valor, String change_24h){
+    public Moeda (String imagem, String name, String price_brl, String percent_change_24h){
         this.imagem = imagem;
-        this.nome = nome;
-        this.valor = valor;
-        this.change_24h = change_24h;
+        this.name = name;
+        this.price_brl = price_brl;
+        this.percent_change_24h = percent_change_24h;
     }
 
     public String getImagem() {
@@ -27,27 +27,27 @@ public class Moeda {
         this.imagem = imagem;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String nome) {
+        this.name = nome;
     }
 
-    public String getValor() {
-        return valor;
+    public String getPrice_brl() {
+        return price_brl;
     }
 
-    public void setValor(String valor) {
-        this.valor = valor;
+    public void setPrice_brl(String valor) {
+        this.price_brl = valor;
     }
 
-    public String getChange_24h() {
-        return change_24h;
+    public String getPercent_change_24h() {
+        return percent_change_24h;
     }
 
-    public void setChange_24h(String descricao) {
-        this.change_24h = descricao;
+    public void setPercent_change_24h(String descricao) {
+        this.percent_change_24h = descricao;
     }
 }

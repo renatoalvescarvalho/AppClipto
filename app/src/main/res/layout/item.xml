@@ -29,7 +29,7 @@
         android:text="TESTE TESTE TESTE "
         android:textColor="#040404"
         android:typeface="sans"
-        android:textSize="15dip"
+        android:textSize="18dip"
         android:textStyle="bold"/>
 
 
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tNome"
         android:textColor="#343434"
-        android:textSize="12dip"
+        android:textSize="16dip"
         android:layout_marginTop="1dip"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="text text text" />
