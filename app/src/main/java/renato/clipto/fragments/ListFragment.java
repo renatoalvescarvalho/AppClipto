@@ -1,23 +1,27 @@
-package renato.clipto;
+package renato.clipto.fragments;
 
-import android.content.Intent;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
+import renato.clipto.ListCoinActivity;
+import renato.clipto.MainActivity;
+import renato.clipto.MercadoService;
 import renato.clipto.Models.Coinmarketcap;
-import renato.clipto.Models.Mercado;
 import renato.clipto.Models.Moeda;
+import renato.clipto.R;
 import renato.clipto.adapters.ListaAdapterMoedas;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,29 +29,33 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ListCoinActivity extends AppCompatActivity {
+/**
+ * Created by Renato on 18/01/2018.
+ */
 
-    private Toolbar toolbar;
-    private Intent intent = null;
+public class ListFragment extends Fragment {
+
+    private static final String TAG = "";
+    private View view;
+    Context thisContext;
+
+    public ListFragment() {
+        // Required empty public constructor
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_coin);
+    }
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Menu");
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+        thisContext = container.getContext();
 
-
+        // Inflate the layout for this fragment
+        view = inflater.inflate(R.layout.activity_list_coin, container, false);
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(MercadoService.BASE_URLCOINMARKETCAP)
@@ -57,7 +65,6 @@ public class ListCoinActivity extends AppCompatActivity {
         MercadoService service =  retrofit.create(MercadoService.class);
 
         Call<Moeda[]> requestMoedas =  service.getListAll();
-
 
         requestMoedas.enqueue(new Callback<Moeda[]>() {
             @Override
@@ -80,14 +87,12 @@ public class ListCoinActivity extends AppCompatActivity {
 
                         NumberFormat nf = NumberFormat.getCurrencyInstance();
 
-                        list.add(new Moeda("",m.getName(), nf.format(_last),m.getPercent_change_24h(), m.getSymbol()));
-
+                        list.add(new Moeda ("",m.getName(), nf.format(_last),m.getPercent_change_24h() + "%", m.getSymbol()));
                     }
 
+                    ListaAdapterMoedas adapterMoedas =  new ListaAdapterMoedas(thisContext,  list);
 
-                    ListaAdapterMoedas adapterMoedas =  new ListaAdapterMoedas(ListCoinActivity.this,  list);
-
-                    ListView listView =  (ListView)findViewById(R.id.listViewCoin);
+                    ListView listView =  (ListView)view.findViewById(R.id.listViewCoin);
 
                     listView.setAdapter(adapterMoedas);
                 }
@@ -98,5 +103,12 @@ public class ListCoinActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+        return view;
     }
 }
+

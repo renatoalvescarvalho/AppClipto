@@ -34,7 +34,7 @@
 
 
     <TextView
-        android:id="@+id/tValor"
+        android:id="@+id/tSymbol"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tNome"
@@ -46,16 +46,16 @@
 
 
     <TextView
-        android:id="@+id/aaa"
+        android:id="@+id/tValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@id/tNome"
         android:gravity="right"
-        android:text="Change (24h)"
-        android:layout_marginRight="20dip"
-        android:textSize="10dip"
-        android:textColor="#595959"
+        android:textColor="#343434"
+        android:text="0,00"
+        android:layout_marginRight="10dip"
+        android:textSize="16dip"
         />
 
     <TextView
@@ -66,8 +66,8 @@
         android:layout_below="@id/tNome"
         android:gravity="right"
         android:textColor="#343434"
-        android:textSize="15dip"
-        android:layout_marginRight="20dip"
+        android:textSize="14dip"
+        android:layout_marginRight="10dip"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="%0" />
+        android:text="0%" />
 </RelativeLayout>

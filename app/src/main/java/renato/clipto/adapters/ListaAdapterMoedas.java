@@ -47,6 +47,10 @@ public class ListaAdapterMoedas extends ArrayAdapter<Moeda> {
         TextView tVariacao = (TextView)convertView.findViewById(R.id.tVariacao);
         tVariacao.setText(item.getPercent_change_24h());
 
+
+        TextView tSymbol = (TextView)convertView.findViewById(R.id.tSymbol);
+        tSymbol.setText(item.getSymbol());
+
         if(item.getPercent_change_24h().contains("-") ){
              tVariacao.setTextColor(Color.RED);
          }

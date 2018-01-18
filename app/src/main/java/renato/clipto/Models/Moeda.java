@@ -10,13 +10,15 @@ public class Moeda {
     private  String name;
     private  String price_brl;
     private  String percent_change_24h;
+    private  String symbol;
 
 
-    public Moeda (String imagem, String name, String price_brl, String percent_change_24h){
+    public Moeda (String imagem, String name, String price_brl, String percent_change_24h, String symbol){
         this.imagem = imagem;
         this.name = name;
         this.price_brl = price_brl;
         this.percent_change_24h = percent_change_24h;
+        this.symbol = symbol;
     }
 
     public String getImagem() {
@@ -49,5 +51,13 @@ public class Moeda {
 
     public void setPercent_change_24h(String descricao) {
         this.percent_change_24h = descricao;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
     }
 }

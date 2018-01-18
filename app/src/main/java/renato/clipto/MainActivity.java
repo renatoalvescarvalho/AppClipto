@@ -36,10 +36,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void listaCoinTabsClick(View view) {
-        intent = new Intent(MainActivity.this, ListCoinActivity.class);
-        startActivity(intent);
-    }
 
 
 }

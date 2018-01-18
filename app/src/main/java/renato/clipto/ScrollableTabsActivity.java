@@ -10,6 +10,7 @@ import android.view.View;
 import renato.clipto.adapters.ViewPagerAdapter;
 import renato.clipto.fragments.FiveFragment;
 import renato.clipto.fragments.FourFragment;
+import renato.clipto.fragments.ListFragment;
 import renato.clipto.fragments.OneFragment;
 import renato.clipto.fragments.SevenFragment;
 import renato.clipto.fragments.SixFragment;
@@ -60,6 +61,7 @@ public class ScrollableTabsActivity extends AppCompatActivity {
         adapter.addFrag(new FiveFragment(), "Dash");
         adapter.addFrag(new SixFragment(), "IOTA");
         adapter.addFrag(new SevenFragment(), "Ripple");
+        adapter.addFrag(new ListFragment(), "ALL");
         viewPager.setAdapter(adapter);
     }
 }
