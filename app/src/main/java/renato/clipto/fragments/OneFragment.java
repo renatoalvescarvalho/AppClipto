@@ -50,6 +50,10 @@ public class OneFragment extends Fragment {
         final TextView txtMaior = (TextView) view.findViewById(R.id.txtMaior);
         final TextView txtMenor = (TextView) view.findViewById(R.id.txtMenor);
 
+        final TextView txtFooter = (TextView) view.findViewById(R.id.txtFooter);
+        txtFooter.setText("Fonte: Mercado Bitcoin");
+
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(MercadoService.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())

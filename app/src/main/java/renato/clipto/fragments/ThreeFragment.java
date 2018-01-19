@@ -56,6 +56,8 @@ public class ThreeFragment  extends Fragment {
         final TextView txtUltimo = (TextView) view.findViewById(R.id.txtUltimo);
         final TextView txtMaior = (TextView) view.findViewById(R.id.txtMaior);
         final TextView txtMenor = (TextView) view.findViewById(R.id.txtMenor);
+        final TextView txtFooter = (TextView) view.findViewById(R.id.txtFooter);
+        txtFooter.setText("Fonte: Mercado Bitcoin");
 
 
         requestMercado.enqueue(new Callback<Mercado>() {
